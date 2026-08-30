@@ -1,0 +1,16 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #182230; background: #f6f7f9; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #175cd3; }
+button, input, select, textarea { font: inherit; }
+input, select, textarea { min-width: 0; padding: .65rem; border: 1px solid #d0d5dd; border-radius: .5rem; background: white; }
+button, .primaryButton { padding: .65rem .9rem; border: 0; border-radius: .5rem; cursor: pointer; }
+.primaryButton { display: inline-block; color: white; background: #175cd3; text-decoration: none; }
+.catalogHeader { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.filters { display: grid; gap: 1rem; padding: 1rem; border-radius: .75rem; background: white; box-shadow: 0 1px 3px #1018281a; }
+.filters label { display: grid; gap: .35rem; font-size: .9rem; font-weight: 600; }
+@media (max-width: 800px) {
+  .catalogHeader { align-items: flex-start; flex-direction: column; }
+  aside { position: static !important; width: 100% !important; }
+  main { min-width: 0; }
+}

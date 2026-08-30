@@ -1,0 +1,101 @@
+/* src/components/MovieList.module.css */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  color: #667085;
+  background: #eaecf0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.meta,
+.empty {
+  color: #667085;
+}
+
+.ratingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.ratingItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratingLabel {
+  font-size: 12px;
+  color: #555;
+}
+
+.ratingValue {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btnDanger {
+  composes: btn;
+  color: #b42318;
+  border-color: #fecdca;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}

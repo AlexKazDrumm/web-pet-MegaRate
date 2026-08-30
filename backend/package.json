@@ -1,0 +1,36 @@
+{
+  "name": "megarate-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "migration:run": "npm run build && node dist/scripts/runMigrations.js",
+    "seed": "npm run build && node dist/scripts/seed.js",
+    "test": "vitest run src"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "helmet": "^8.1.0",
+    "iconv-lite": "^0.7.3",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.31"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.0",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.2.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
