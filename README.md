@@ -11,14 +11,12 @@
 - обновление IMDb, Кинопоиска, MyShows, Rotten Tomatoes, Metacritic и World-Art;
 - отдельные статусы для просмотренного и списка на будущее.
 
-## Структура
+## Стек
 
 - `frontend` — React, TypeScript, Vite;
 - `backend` — Express, TypeScript, TypeORM;
 - PostgreSQL — хранение каталога и оценок;
-- Docker Compose — локальный запуск всего приложения.
-
-Backend принимает ссылки только на заранее заданные домены кинокаталогов, ограничивает размер запросов и ответов внешних сервисов, не следует перенаправлениям и применяет rate limit к операциям поиска и разбора страниц.
+- Docker Compose — запуск приложения и PostgreSQL.
 
 ## Запуск в Docker
 
@@ -49,7 +47,7 @@ npm run dev
 
 Для backend требуется PostgreSQL и строка подключения `DATABASE_URL`. При старте Docker-контейнера миграции применяются автоматически; вручную их можно выполнить командой `npm run migration:run`.
 
-## Проверка
+## Команды
 
 ```bash
 cd backend
@@ -60,8 +58,6 @@ cd ../frontend
 npm run typecheck
 npm run build
 ```
-
-Автоматическая проверка выполняет тесты backend, компиляцию TypeScript и сборку frontend при каждом push и pull request.
 
 ## Источники данных
 
